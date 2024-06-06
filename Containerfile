@@ -307,6 +307,11 @@ RUN rpm-ostree install \
         webapp-manager \
         btop \
         fish \
+        tmux \
+        zsh \
+        mc \
+	bat \
+	ripgrep \
         lshw \
         xdotool \
         wmctrl \
@@ -323,6 +328,7 @@ RUN rpm-ostree install \
         extest.i686 \
         xwiimote-ng \
         twitter-twemoji-fonts \
+	source-foundry-hack-fonts \
         google-noto-sans-cjk-fonts \
         lato-fonts \
         fira-code-fonts \
@@ -330,7 +336,17 @@ RUN rpm-ostree install \
         fastfetch \
         glow \
         gum \
-        vim \
+        neovim \
+        neovim-qt \
+        neovim-ale \
+	python3-neovim \
+        neomutt \
+	netdata \
+	netdata-conf \
+	netdata-data \
+	netdata-freeipmi \
+	python3-netdata \
+	nextcloud-client \
         zoxide \
         setools \
         setroubleshoot \
@@ -467,6 +483,10 @@ RUN if grep -q "kinoite" <<< "${BASE_IMAGE_NAME}"; then \
             steamdeck-kde-presets-desktop \
             kdeconnectd \
             kdeplasma-addons \
+	    kde-baseapps \
+	    kdepim \
+	    doublecmd-qt \
+	    nextcloud-client-dolphin \
             rom-properties-kf6 \
             joystickwake \
             ptyxis && \
@@ -481,9 +501,7 @@ RUN if grep -q "kinoite" <<< "${BASE_IMAGE_NAME}"; then \
         sed -i 's@Exec=ptyxis@Exec=kde-ptyxis@g' /usr/share/applications/org.gnome.Ptyxis.desktop && \
         sed -i 's@Keywords=@Keywords=konsole;console;@g' /usr/share/applications/org.gnome.Ptyxis.desktop && \
         cp /usr/share/applications/org.gnome.Ptyxis.desktop /usr/share/kglobalaccel/org.gnome.Ptyxis.desktop && \
-        sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' /usr/share/applications/org.kde.konsole.desktop && \
         sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nNoDisplay=true@g' /usr/share/applications/yad-icon-browser.desktop && \
-        rm -f /usr/share/kglobalaccel/org.kde.konsole.desktop && \
         systemctl enable kde-sysmonitor-workaround.service \
     ; else \
         rpm-ostree override replace \
@@ -496,6 +514,7 @@ RUN if grep -q "kinoite" <<< "${BASE_IMAGE_NAME}"; then \
             vte-profile && \
         rpm-ostree install \
             ptyxis \
+	    doublecmd-gtk \
             nautilus-open-any-terminal \
             nautilus-gsconnect \
             steamdeck-backgrounds \
