@@ -115,7 +115,6 @@ RUN sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/_copr_ublue-os-akmods.repo
     rpm-ostree install \
         /tmp/akmods-rpms/kmods/*kvmfr*.rpm \
         /tmp/akmods-rpms/kmods/*xone*.rpm \
-        /tmp/akmods-rpms/kmods/*xpadneo*.rpm \
         /tmp/akmods-rpms/kmods/*openrazer*.rpm \
         /tmp/akmods-rpms/kmods/*v4l2loopback*.rpm \
         /tmp/akmods-rpms/kmods/*wl*.rpm \
@@ -443,7 +442,11 @@ RUN rpm-ostree install \
         vkBasalt.x86_64 \
         vkBasalt.i686 \
         obs-vkcapture.x86_64 \
+        libobs_vkcapture.x86_64 \
+        libobs_glcapture.x86_64 \
         obs-vkcapture.i686 \
+        libobs_vkcapture.i686 \
+        libobs_glcapture.i686 \
         mangohud.x86_64 \
         mangohud.i686 && \
     if grep -q "kinoite" <<< "${BASE_IMAGE_NAME}"; then \
@@ -675,6 +678,7 @@ RUN /usr/libexec/containerbuild/build-initramfs && \
         sed -i '/^PRETTY_NAME/s/Silverblue/Bazzite GNOME/' /usr/lib/os-release \
     ; fi && \
     systemctl disable waydroid-container.service && \
+    curl -Lo /usr/etc/dxvk-example.conf https://raw.githubusercontent.com/doitsujin/dxvk/master/dxvk.conf && \
     curl -Lo /usr/bin/waydroid-choose-gpu https://raw.githubusercontent.com/KyleGospo/waydroid-scripts/main/waydroid-choose-gpu.sh && \
     chmod +x /usr/bin/waydroid-choose-gpu && \
     ostree container commit
@@ -714,8 +718,7 @@ RUN rpm-ostree override remove \
         rpm-ostree install \
             steamdeck-gnome-presets \
             gnome-shell-extension-caribou-blocker \
-            sddm && \
-        curl -Lo /usr/etc/dxvk-example.conf https://raw.githubusercontent.com/doitsujin/dxvk/master/dxvk.conf \
+            sddm \
     ; fi && \
     ostree container commit
 
