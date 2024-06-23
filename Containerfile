@@ -449,6 +449,9 @@ RUN rpm-ostree install \
         libobs_glcapture.i686 \
         mangohud.x86_64 \
         mangohud.i686 && \
+    ln -s wine32 /usr/bin/wine && \
+    ln -s wine32-preloader /usr/bin/wine-preloader && \
+    ln -s wineserver64 /usr/bin/wineserver && \
     if grep -q "kinoite" <<< "${BASE_IMAGE_NAME}"; then \
         rpm-ostree override remove \
             gamemode \
@@ -476,7 +479,8 @@ RUN rpm-ostree install \
 # Configure KDE & GNOME
 RUN if grep -q "kinoite" <<< "${BASE_IMAGE_NAME}"; then \
         rpm-ostree install \
-            qt && \
+            qt \
+            krdp && \
         rpm-ostree override remove \
             plasma-welcome && \
         rpm-ostree override replace \
@@ -524,9 +528,7 @@ RUN if grep -q "kinoite" <<< "${BASE_IMAGE_NAME}"; then \
         --from repo=copr:copr.fedorainfracloud.org:ublue-os:staging \
             mutter \
             mutter-common \
-            gnome-shell \
-            vte291 \
-            vte-profile && \
+            gnome-shell && \
         rpm-ostree install \
             ptyxis \
 	    doublecmd-gtk \
