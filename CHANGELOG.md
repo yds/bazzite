@@ -1,5 +1,53 @@
 # Changelog
 
+## [3.1.0](https://github.com/yds/bazzite/compare/v3.0.1...v3.1.0) (2024-06-25)
+
+
+### Features
+
+* Add Brazilian Portuguese translation to README ([#1258](https://github.com/yds/bazzite/issues/1258)) ([0bcea89](https://github.com/yds/bazzite/commit/0bcea89e9603dc6fe2cde19693dfdfc9970dea72))
+* add firstboot warning to users with polaris gpus ([#1277](https://github.com/yds/bazzite/issues/1277)) ([7848f42](https://github.com/yds/bazzite/commit/7848f42799f605a8790f21ed79fcebd26590bc2a))
+* add hidden ujust to install hhd main branch locally ([#1218](https://github.com/yds/bazzite/issues/1218)) ([4201633](https://github.com/yds/bazzite/commit/4201633f2766a35da1e408dd3241d48cb27e9ff1))
+* Add ydotool ([#1262](https://github.com/yds/bazzite/issues/1262)) ([d2e087f](https://github.com/yds/bazzite/commit/d2e087f0b6a82a4267b41bdd59a48d313a83a1b2))
+* added panel orietation and gttsize kargs ([8bff5e7](https://github.com/yds/bazzite/commit/8bff5e75606821e0d978b9f4dc63d36e6724fc3c))
+* Automatically disable bluetooth ertm to improve reliability of controller connections ([c313765](https://github.com/yds/bazzite/commit/c3137654708349cee9ae8a8c4722617bd780a0ad))
+* **fcitx5:** Add advanced Chinese input method `fcitx5-chinese-addons` ([#1261](https://github.com/yds/bazzite/issues/1261)) ([cf63b89](https://github.com/yds/bazzite/commit/cf63b89c0b749391d3a7f0b85846398cb30f853a))
+* generalize certain SYS_IDs ([#1257](https://github.com/yds/bazzite/issues/1257)) ([6831f7c](https://github.com/yds/bazzite/commit/6831f7cb2e5fb0b98d9dfa261ee54353123a431d))
+* **GitHub:** Adding a ReadMe In french ([#1224](https://github.com/yds/bazzite/issues/1224)) ([5324790](https://github.com/yds/bazzite/commit/53247900b8a074182be234cebed807ad436e727a))
+* **gnome:** Add Exhibit flatpak for viewing 3D models. ([466a35d](https://github.com/yds/bazzite/commit/466a35deccfe6adfa7bad376a6b76a0acc852d4d))
+* **gnome:** Add ibus-mozc for Japanese input ([1faf9df](https://github.com/yds/bazzite/commit/1faf9dfdad7dc534693228b7a970981c82eec206))
+* **gnome:** Add template for MangoHud.conf ([2df9d82](https://github.com/yds/bazzite/commit/2df9d821e33a1e691ba1ce533bcb071cb7e73b7d))
+* **gnome:** Support DXVK/vkBasalt config file templates on non-deck versions of Bazzite GNOME. ([2df9d82](https://github.com/yds/bazzite/commit/2df9d821e33a1e691ba1ce533bcb071cb7e73b7d))
+* **gnome:** Switch to Papers from Evince ([cfbb54c](https://github.com/yds/bazzite/commit/cfbb54cc7c1f333f8376115a37fbfdbb97fc633d))
+* **kde:** Add krdp ([22ad79f](https://github.com/yds/bazzite/commit/22ad79f6d8bec9a6aa09c2bd6dd5c6a663e44080))
+* **kde:** Add MangoHud, DXVK, and vkBasalt configs under the "Create new" menu. ([12bed03](https://github.com/yds/bazzite/commit/12bed038245487764d4a49b216969087d109beb2))
+* **kde:** Restore KDE Wallpaper Engine integration for KDE 6 ([643dc00](https://github.com/yds/bazzite/commit/643dc00d0bbbc0729ca502d458f97ef6c0d934d4))
+* Remove decky hhd plugin, replaced by built in hhd overlay ([#1238](https://github.com/yds/bazzite/issues/1238)) ([16838c8](https://github.com/yds/bazzite/commit/16838c8633d0dcb73295eabd5b7065251919231e))
+* Restore xpadneo driver for some xbox controllers over bluetooth. ([1fd0d7a](https://github.com/yds/bazzite/commit/1fd0d7aa666f39c5e665f96bedf9d988a5f36fa3))
+* Switch to OpenRGB AppImage due to Flatpak erroneously considering udev rules to be not present. ([aa65885](https://github.com/yds/bazzite/commit/aa65885b2c0f3f3ab68b369af05772b8a1608dbb))
+* **tdpfix:** add detection for multiple cards ([#1279](https://github.com/yds/bazzite/issues/1279)) ([c70ccbd](https://github.com/yds/bazzite/commit/c70ccbd1748ef4020d9a86205bd4ec9ff2575ff6))
+
+
+### Bug Fixes
+
+* Add DMI for ONEXPLAYER 2 PRO 8840U model ([#1232](https://github.com/yds/bazzite/issues/1232)) ([e008b9d](https://github.com/yds/bazzite/commit/e008b9d868be37ee5e68c9e7178b7e7d86a96c0b))
+* Add DMIs for AYANEO AIR 1S, OXP2/Pro and ONEXFLY ([#1216](https://github.com/yds/bazzite/issues/1216)) ([2a8fc70](https://github.com/yds/bazzite/commit/2a8fc7073070b0c4006552bcdf40916abb2ca8ec))
+* Add symlink from libdrm.so for SteamVR ([e12411d](https://github.com/yds/bazzite/commit/e12411d4aabe5288a59ff2a45c1e3978ccc14b3d))
+* adjust build schedule based on adjustments to main and hwe ([#1254](https://github.com/yds/bazzite/issues/1254)) ([715bc04](https://github.com/yds/bazzite/commit/715bc0410dc1c581c88c38fbc363dfdd9ce62952))
+* **bazzite-powersave:** make arg to set PPD to balance work ([#1252](https://github.com/yds/bazzite/issues/1252)) ([1c2148b](https://github.com/yds/bazzite/commit/1c2148bde6bcf6ac048531757f67e647b0fcbb31))
+* Correct missing 32-bit obs-vkcapture libraries, rpm-ostree chicanery ([8e5233a](https://github.com/yds/bazzite/commit/8e5233a414f9ff7a20b494d981b5629413189110))
+* **deck:** Add workaround for another mura issue on OLED Deck ([aeef5a3](https://github.com/yds/bazzite/commit/aeef5a3d47ebeb97206e9fdb4804a4838e3b50f2))
+* **deck:** Correct missing Wifi firmware for OLED models ([2636ebd](https://github.com/yds/bazzite/commit/2636ebd496dab9fd192063ac1a3976b926fba746))
+* **deck:** Patch broken mura setup script ([477f765](https://github.com/yds/bazzite/commit/477f765ee1226d0388ffabc2beb3c20b0468b513))
+* Disable explicit sync in gamescope by default until fixed ([3fbd3a0](https://github.com/yds/bazzite/commit/3fbd3a0d57443efe8761c16d58b304df1a8a64f3))
+* **just:** correctly detect if virt-manager is installed ([#1278](https://github.com/yds/bazzite/issues/1278)) ([289b63f](https://github.com/yds/bazzite/commit/289b63f5faba0778583e989d7c0c732af12088e8))
+* Restore missing wine executables ([ca3d605](https://github.com/yds/bazzite/commit/ca3d6053040671576b6af44add886ab3162479f3))
+* **steam:** Fix flickering in nvidia cards ([#1251](https://github.com/yds/bazzite/issues/1251)) ([548a9cc](https://github.com/yds/bazzite/commit/548a9ccce0f0df4139b2c1afd3e845d2d027ae4f))
+* **steam:** Improve big picture mode performance on multi-gpu AMD laptops. ([6500fed](https://github.com/yds/bazzite/commit/6500fed617a2c259694608e0928e2ca1da664527))
+* **sunshine:** fix systemd file for missing closing quote ([#1226](https://github.com/yds/bazzite/issues/1226)) ([c89cf0d](https://github.com/yds/bazzite/commit/c89cf0dc53a90d6f24cd517150e50ed2f58ea1aa))
+* update sunshine workaround to handle the symlink ([7438427](https://github.com/yds/bazzite/commit/7438427991076df0e6cd7a8fdbe6129c16f30400))
+* **wine:** Match Fedora wine's configuration ([#1255](https://github.com/yds/bazzite/issues/1255)) ([998626c](https://github.com/yds/bazzite/commit/998626c2a6fa6a245a39fc2d87c7d9a29c97d164))
+
 ## [3.0.1](https://github.com/yds/bazzite/compare/v3.0.1...v3.0.1) (2024-06-06)
 
 
